@@ -413,6 +413,9 @@ class Command(BaseCommand):
         if not (
                 ethereum_network in MASTER_COPIES and ethereum_network in PROXY_FACTORIES
         ):
+            self.style.SUCCESS(
+                f"Setting up RANGERSDEV safe and proxy factory addresses"
+            )
             self._setup_safe_master_copies([("0xE51abdf814f8854941b9Fe8e3A4F65CAB4e7A4a8", 517, "1.3.0+L2")])
             self._setup_safe_proxy_factories([("0xE89ce3bcD35bA068A9F9d906896D3d03Ad5C30EC", 499)])
 
