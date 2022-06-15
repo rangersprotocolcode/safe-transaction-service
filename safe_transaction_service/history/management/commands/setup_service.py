@@ -265,10 +265,10 @@ MASTER_COPIES: Dict[EthereumNetwork, List[Tuple[str, int, str]]] = {
         ("0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552", 748815, "1.3.0"),
     ],
     EthereumNetwork.RANGERS_MAINNET: [
-        ("0x3E5c63644E683549055b9Be8653de26E0B4CD36E", 748810, "1.3.0+L2"),
+        ("0xE51abdf814f8854941b9Fe8e3A4F65CAB4e7A4a8", 748810, "1.3.0+L2"),
     ],
     EthereumNetwork.RANGERS_TESTNET: [
-        ("0x3E5c63644E683549055b9Be8653de26E0B4CD36E", 748810, "1.3.0+L2"),
+        ("0xE51abdf814f8854941b9Fe8e3A4F65CAB4e7A4a8", 15470000, "1.3.0+L2"),
     ],
     EthereumNetwork.RANGERS_DEVNET: [
         ("0xE51abdf814f8854941b9Fe8e3A4F65CAB4e7A4a8", 334280, "1.3.0+L2"),
@@ -383,7 +383,7 @@ PROXY_FACTORIES: Dict[EthereumNetwork, List[Tuple[str, int]]] = {
         ("0xE89ce3bcD35bA068A9F9d906896D3d03Ad5C30EC", 748810),
     ],
     EthereumNetwork.RANGERS_TESTNET: [
-        ("0xE89ce3bcD35bA068A9F9d906896D3d03Ad5C30EC", 748810),
+        ("0xE89ce3bcD35bA068A9F9d906896D3d03Ad5C30EC", 15470000),
     ],
     EthereumNetwork.RANGERS_DEVNET: [
         ("0xE89ce3bcD35bA068A9F9d906896D3d03Ad5C30EC", 334280),
