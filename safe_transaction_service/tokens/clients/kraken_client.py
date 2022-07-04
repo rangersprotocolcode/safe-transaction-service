@@ -56,3 +56,6 @@ class KrakenClient:
 
     def get_ewt_usd_price(self) -> float:
         return self._get_price("EWTUSD")
+
+    def get_rpg_usd_price(self) -> float:
+        return self._get_price("RPGUSD")

@@ -43,3 +43,10 @@ class BinanceClient:
         :raises: CannotGetPrice
         """
         return self._get_price("MATICUSDT")
+
+    def get_rpg_usd_price(self) -> float:
+        """
+        :return: current USD price for RPG
+        :raises: CannotGetPrice
+        """
+        return self._get_price("RPGUSDT")

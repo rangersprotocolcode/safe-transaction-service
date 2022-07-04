@@ -45,6 +45,7 @@ class CoingeckoClient:
             EthereumNetwork.MATIC,
             EthereumNetwork.OPTIMISTIC,
             EthereumNetwork.XDAI,
+            EthereumNetwork.RANGERS_TESTNET,
         )
 
     def _get_price(self, url: str, name: str):
@@ -104,3 +105,6 @@ class CoingeckoClient:
 
     def get_gather_usd_price(self) -> float:
         return self.get_price("gather")
+
+    def get_rpg_usd_price(self) -> float:
+        return self.get_price("rangers-protocol-gas")
