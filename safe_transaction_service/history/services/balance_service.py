@@ -272,6 +272,8 @@ class BalanceService:
             eth_price = 0
         balances_with_usd = []
         price_token_addresses = [balance.get_price_address() for balance in balances]
+        eth_address_list = ['0x049891B7e5a1E886aBe5cA71a40A79fBBd2dcC87', '0x09C1226a28C07F2177975bdeC7aC3BAa0133D833']
+        usdt_address_list = ['0x0F3A62dB02F743b549053cc8d538C65aB01E3618', '0x8E8816a1747fDDC5F8B45d2e140a425D3788f659']
         token_eth_values_with_timestamp = (
             self.price_service.get_cached_token_eth_values(price_token_addresses)
         )
@@ -284,7 +286,12 @@ class BalanceService:
                 fiat_conversion = eth_price
                 fiat_balance = fiat_conversion * (balance.balance / 10**18)
             else:
-                fiat_conversion = eth_price * token_eth_value
+                if token_address in eth_address_list:
+                    fiat_conversion = self.price_service.get_eth_usd_price()
+                elif token_address in usdt_address_list:
+                    fiat_conversion = 1
+
+                #fiat_conversion = eth_price * token_eth_value
                 balance_with_decimals = balance.balance / 10**balance.token.decimals
                 fiat_balance = fiat_conversion * balance_with_decimals
 

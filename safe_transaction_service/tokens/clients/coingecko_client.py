@@ -108,3 +108,6 @@ class CoingeckoClient:
 
     def get_rpg_usd_price(self) -> float:
         return self.get_price("rangers-protocol-gas")
+
+    def get_eth_usd_price(self) -> float:
+        return self.get_price("ethereum")

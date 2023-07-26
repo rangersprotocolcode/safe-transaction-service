@@ -188,6 +188,9 @@ class PriceService:
             except CannotGetPrice:
                 return self.coingecko_client.get_rpg_usd_price()
 
+    def get_eth_usd_price(self) -> float:
+        return self.coingecko_client.get_eth_usd_price()
+
     @cachedmethod(cache=operator.attrgetter("cache_eth_price"))
     @cache_memoize(60 * 30, prefix="balances-get_eth_usd_price")  # 30 minutes
     def get_native_coin_usd_price(self) -> float:
